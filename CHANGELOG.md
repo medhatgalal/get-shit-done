@@ -6,6 +6,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+- Added Kiro CLI runtime installer support via `--kiro` and `--kiro-cli`.
+- Added deterministic installer coverage for Kiro local and global runtime installs.
+
 ### Fixed
 - Scope phase counting in `buildStateFrontmatter` and `cmdPhaseComplete` to current milestone — multi-milestone projects no longer report inflated total/completed phases
 - Use ROADMAP phase count for `total_phases` when phases lack directories — prevents premature milestone completion detection
@@ -17,7 +21,6 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 - Shell snippets in workflows use `printf` instead of `echo` to prevent jq parse errors with special characters
-
 ## [1.22.0] - 2026-02-27
 
 ### Added
