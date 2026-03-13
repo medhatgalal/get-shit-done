@@ -8,7 +8,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 - **Node repair operator** (`workflows/node-repair.md`) — autonomous recovery when task verification fails. Instead of immediately asking the user, the executor attempts structured repair: RETRY (different approach), DECOMPOSE (break into sub-tasks), or PRUNE (skip with justification). Only escalates to the user when the repair budget is exhausted or an architectural decision is needed. Repair budget defaults to 2 attempts per task; configurable via `workflow.node_repair_budget`. Disable entirely with `workflow.node_repair: false` to restore original behavior.
-
+- Added Kiro CLI runtime installer support via `--kiro` and `--kiro-cli`.
+- Added deterministic installer coverage for Kiro local and global runtime installs.
 ## [1.22.4] - 2026-03-03
 
 ### Added
@@ -28,7 +29,6 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 - Installer now replaces `$HOME/.claude/` paths (not just `~/.claude/`) for non-Claude runtimes — fixes broken commands on local installs and Gemini/OpenCode/Codex installs (#905, #909)
-
 ## [1.22.2] - 2026-03-03
 
 ### Fixed
@@ -68,7 +68,6 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 - Shell snippets in workflows use `printf` instead of `echo` to prevent jq parse errors with special characters
-
 ## [1.22.0] - 2026-02-27
 
 ### Added
