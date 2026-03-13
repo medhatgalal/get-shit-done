@@ -139,6 +139,14 @@ node bin/install.js --claude --local
 
 Installs to `./.claude/` for testing modifications before contributing.
 
+To install from your own fork instead of the npm registry release:
+
+```bash
+npx github:medhatgalal/get-shit-done#main
+```
+
+That pulls the current `main` branch from your fork, which is useful when your fork contains fixes that are not yet merged upstream.
+
 </details>
 
 ### Recommended: Skip Permissions Mode
